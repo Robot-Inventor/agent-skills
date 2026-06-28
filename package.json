@@ -1,6 +1,6 @@
 {
   "name": "@robot-inventor/agent-skills",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Roboin's personal collection of Agent Skills.",
   "homepage": "https://github.com/Robot-Inventor/agent-skills#readme",
   "private": true,
