@@ -1,0 +1,25 @@
+{
+  "name": "@robot-inventor/agent-skills",
+  "version": "0.0.0",
+  "description": "Roboin's personal collection of Agent Skills.",
+  "homepage": "https://github.com/Robot-Inventor/agent-skills#readme",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/Robot-Inventor/agent-skills/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Robot-Inventor/agent-skills.git"
+  },
+  "license": "MIT",
+  "author": "Robot-Inventor",
+  "type": "module",
+  "scripts": {
+    "ci:version": "changeset version",
+    "ci:publish": "changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "^0.7.0",
+    "@changesets/cli": "^2.31.0"
+  }
+}
