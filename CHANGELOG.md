@@ -1,5 +1,11 @@
 # @robot-inventor/agent-skills
 
+## 0.1.1
+
+### Patch Changes
+
+- [#4](https://github.com/Robot-Inventor/agent-skills/pull/4) [`15434d6`](https://github.com/Robot-Inventor/agent-skills/commit/15434d67f6f96be1390c873e758935fb85cf5f2f) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - fix: fix an issue where the review-loop skill might not be invoked unless explicitly instructed
+
 ## 0.1.0
 
 ### Minor Changes
