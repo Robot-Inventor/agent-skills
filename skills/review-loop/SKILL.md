@@ -1,6 +1,6 @@
 ---
 name: review-loop
-description: Thoroughly improve code quality by requesting a review from a sub-agent after completing tasks requiring code editing, before returning the conversation turn to the user.
+description: Thoroughly improve code quality by requesting a review from a sub-agent after completing tasks requiring code editing, before returning the conversation turn to the user. Use for any task that edits code or configuration. Read this skill before starting edits, and after completing the requested changes run an isolated sub-agent review loop before returning the final response.
 license: MIT
 metadata:
   author: Robot-Inventor
