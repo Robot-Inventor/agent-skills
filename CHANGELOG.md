@@ -1,5 +1,11 @@
 # @robot-inventor/agent-skills
 
+## 0.2.1
+
+### Patch Changes
+
+- [#8](https://github.com/Robot-Inventor/agent-skills/pull/8) [`b9e0724`](https://github.com/Robot-Inventor/agent-skills/commit/b9e072410964401db8dafd1839f358e9c1fc2226) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - fix: remove disallowed character from YAML
+
 ## 0.2.0
 
 ### Minor Changes
