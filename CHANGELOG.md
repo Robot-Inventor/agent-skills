@@ -1,5 +1,11 @@
 # @robot-inventor/agent-skills
 
+## 0.2.0
+
+### Minor Changes
+
+- [#6](https://github.com/Robot-Inventor/agent-skills/pull/6) [`f303564`](https://github.com/Robot-Inventor/agent-skills/commit/f3035640f6879408615134e4cc8ce215f48087ed) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: add `prove-it-diagnostics` skill
+
 ## 0.1.1
 
 ### Patch Changes
