@@ -3,6 +3,7 @@
 My personal collection of Agent Skills.
 
 - [cleanup-changes](skills/cleanup-changes/SKILL.md): The skill to revert unnecessary changes and leave only essential changes.
+- [prove-it-diagnostics](skills/prove-it-diagnostics/SKILL.md): The skill to fix bugs and improve performance by proving the root cause through minimal reproduction code or benchmarks, rather than relying on speculation based solely on reading the code
 - [review-loop](skills/review-loop/SKILL.md): Thoroughly improve code quality by requesting a review from a sub-agent.
 
 ## Installation
