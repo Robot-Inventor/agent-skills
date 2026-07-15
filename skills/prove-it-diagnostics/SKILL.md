@@ -78,3 +78,7 @@ Temporary logs are allowed when they reduce uncertainty. Add them aggressively w
 Performance work needs a baseline. Use repeated timings, a profiler, or a benchmark before changing code, then reuse the same method after changing code.
 
 When the environment prevents execution, say which command, file, REPL input, test, log, benchmark, or profiler run would prove the claim. Do not present an unrun hypothesis as a confirmed cause.
+
+Identify and fix the root cause. For example, if an error causes a bug, prioritize finding and fixing the source of the error so it does not occur, rather than adding a fallback for when it happens.
+
+When you get stuck while fixing a bug or improving performance, or when you observe behavior that contradicts the logic, search the web, if available, for reports of similar issues and solutions in relevant libraries’ GitHub issues and pull requests, Stack Overflow, and other sources.
