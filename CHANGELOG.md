@@ -1,5 +1,11 @@
 # @robot-inventor/agent-skills
 
+## 0.4.0
+
+### Minor Changes
+
+- [#12](https://github.com/Robot-Inventor/agent-skills/pull/12) [`26291c5`](https://github.com/Robot-Inventor/agent-skills/commit/26291c55f19f1118c557e30e209773958b7a66ae) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: add `identify-search-maintenance` skill
+
 ## 0.3.0
 
 ### Minor Changes
