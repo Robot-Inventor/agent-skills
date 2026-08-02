@@ -1,5 +1,15 @@
 # @robot-inventor/agent-skills
 
+## 0.5.0
+
+### Minor Changes
+
+- [#14](https://github.com/Robot-Inventor/agent-skills/pull/14) [`468d61c`](https://github.com/Robot-Inventor/agent-skills/commit/468d61cdd473115fc04902437597c6e1eecc2594) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: rewrite `prove-it-diagnostics`
+
+- [#17](https://github.com/Robot-Inventor/agent-skills/pull/17) [`a4116a6`](https://github.com/Robot-Inventor/agent-skills/commit/a4116a63ea2f5e4e86fe24890bc257596c517ede) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: improve phrasing of the `prove-it-diagnostics` skill
+
+- [#16](https://github.com/Robot-Inventor/agent-skills/pull/16) [`2f87826`](https://github.com/Robot-Inventor/agent-skills/commit/2f8782611e0a49abf3171075e1caba8cbe13f127) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: add `simple-engineering` skill
+
 ## 0.4.0
 
 ### Minor Changes
