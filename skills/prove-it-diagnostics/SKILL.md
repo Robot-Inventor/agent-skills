@@ -50,7 +50,7 @@ Remove temporary logs, reproduction code, generated files, and log data created 
 
 If a user reports that your fix did not resolve the bug or improve performance, treat your previous diagnosis as unverified and restart the investigation.
 
-Identify and fix the root cause. For example, when an error triggers a bug, find and fix the source of the error instead of adding a fallback for the failure. Keep asking yourself, “Is this the root cause?”
+Surface-level and stop-gap fixes are shameful; identify and fix the root cause. For example, when an error triggers a bug, find and fix the source of the error instead of adding a fallback for the failure. Keep asking yourself, “Is this the root cause?”
 
 When evidence points to a bug in a dependency, do not patch the dependency. Tell the user that the dependency appears to contain a bug, describe the evidence, and propose changes they can make in their project without modifying the dependency.
 
