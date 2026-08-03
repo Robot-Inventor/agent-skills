@@ -16,7 +16,7 @@ Before implementing a feature or fixing a bug, consider all options. Instead of 
 
 ## Avoid reinventing the wheel
 
-Reinventing the wheel should be avoided. Before writing a function, check whether a function that achieves the same functionality already exists in the project. When implementing complex processing, investigate whether a popular and well-maintained library that achieves equivalent functionality exists, and if so, propose using it to the user.
+Reinventing the wheel should be avoided. Before adding code, check whether existing code in the project or the project's dependencies already provide functionality that covers part or all of that processing. When implementing complex processing, investigate whether a popular and well-maintained library that achieves equivalent functionality exists, and if so, propose using it to the user.
 
 ## Keep only necessary changes
 
