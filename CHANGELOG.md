@@ -1,5 +1,11 @@
 # @robot-inventor/agent-skills
 
+## 0.5.1
+
+### Patch Changes
+
+- [#18](https://github.com/Robot-Inventor/agent-skills/pull/18) [`2cecff9`](https://github.com/Robot-Inventor/agent-skills/commit/2cecff9d8565cad80df23ae20305ec0a373536cf) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: update `simple-engineering` skill to leverage dependency library features
+
 ## 0.5.0
 
 ### Minor Changes
