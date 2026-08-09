@@ -1,5 +1,17 @@
 # @robot-inventor/agent-skills
 
+## 0.6.0
+
+### Minor Changes
+
+- [#23](https://github.com/Robot-Inventor/agent-skills/pull/23) [`3d778af`](https://github.com/Robot-Inventor/agent-skills/commit/3d778afbd95eb192834820b26c37d54adbf2311d) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: add instructions to simple-engineering skill to avoid unnecessary conditional branches and try-catch blocks
+
+- [#21](https://github.com/Robot-Inventor/agent-skills/pull/21) [`e66657e`](https://github.com/Robot-Inventor/agent-skills/commit/e66657e6ea02a6d8bf65d1f85b097f868b60cc52) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: add web-master skill
+
+### Patch Changes
+
+- [#20](https://github.com/Robot-Inventor/agent-skills/pull/20) [`e7e97ea`](https://github.com/Robot-Inventor/agent-skills/commit/e7e97eaf4a8d3e3c08ec469af16eef6d49296c78) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: improve the description of simple-engineering
+
 ## 0.5.1
 
 ### Patch Changes
