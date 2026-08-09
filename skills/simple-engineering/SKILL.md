@@ -1,6 +1,6 @@
 ---
 name: simple-engineering
-description: A skill outlining the fundamental principles to keep in mind when writing or editing code.
+description: A skill outlining the fundamental principles to keep in mind when writing or editing code. Read this skill before developing an implementation plan or writing or reviewing code, and apply it to your work.
 license: MIT
 metadata:
   author: Robot-Inventor
