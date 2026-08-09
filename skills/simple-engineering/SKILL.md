@@ -14,6 +14,8 @@ Overengineering is a shameful and foolish act, and it is important to always pur
 
 Before implementing a feature or fixing a bug, consider all options. Instead of just listing similar choices or being bound by preconceptions and previous thinking, consider all options, including completely different approaches. Among the available options, choose the one that is the clearest, simplest, requires the fewest lines of code, and meets the user's requirements. There is no need to use iron plates and nails to repair torn clothes. Choose a right-sized, simple approach rather than an overly large and complex one.
 
+Also avoid bringing unnecessary complexity into your code. Carefully examine related processing to ensure there are no impossible conditional branches or unnecessary try-catch blocks. Check the type definitions and actual processing, and remove any impossible conditional branches. There is no need to wrap code in a new try-catch block if an exception is unlikely to occur normally or if a try-catch already exists inside the called function.
+
 ## Avoid reinventing the wheel
 
 Reinventing the wheel should be avoided. Before adding code, check whether existing code in the project or the project's dependencies already provide functionality that covers part or all of that processing. When implementing complex processing, investigate whether a popular and well-maintained library that achieves equivalent functionality exists, and if so, propose using it to the user.
