@@ -5,7 +5,7 @@
     },
     "plugins": [
         {
-            "name": "roboin-agent-skills",
+            "name": "agent-skills",
             "source": {
                 "source": "url",
                 "url": "https://github.com/Robot-Inventor/agent-skills.git",
