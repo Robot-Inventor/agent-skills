@@ -1,11 +1,5 @@
 # @robot-inventor/agent-skills
 
-## 0.7.0
-
-### Minor Changes
-
-- [#34](https://github.com/Robot-Inventor/agent-skills/pull/34) [`6f5f379`](https://github.com/Robot-Inventor/agent-skills/commit/6f5f379d0866b324d43a1418dcfba8eda136c6c8) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: add Codex and OpenCode plugins
-
 ## 0.6.0
 
 ### Minor Changes
