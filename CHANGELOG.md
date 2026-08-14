@@ -1,5 +1,13 @@
 # @robot-inventor/agent-skills
 
+## 0.7.1
+
+### Patch Changes
+
+- [#41](https://github.com/Robot-Inventor/agent-skills/pull/41) [`41317d6`](https://github.com/Robot-Inventor/agent-skills/commit/41317d6f62c7807eece42cb873c881b1f21c188e) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - fix: fix plugin export for OpenCode
+
+- [#41](https://github.com/Robot-Inventor/agent-skills/pull/41) [`41317d6`](https://github.com/Robot-Inventor/agent-skills/commit/41317d6f62c7807eece42cb873c881b1f21c188e) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - fix: change plugin name in `plugin.json`
+
 ## 0.7.0
 
 ### Minor Changes
