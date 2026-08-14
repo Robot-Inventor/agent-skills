@@ -15,6 +15,7 @@
   "type": "module",
   "files": ["./plugin.json", "./skills/", "./scripts/opencode.ts"],
   "publishConfig": {
+    "access": "public",
     "provenance": true
   },
   "scripts": {
