@@ -3,7 +3,6 @@
   "version": "0.6.0",
   "description": "Roboin's personal collection of Agent Skills.",
   "homepage": "https://github.com/Robot-Inventor/agent-skills#readme",
-  "private": true,
   "bugs": {
     "url": "https://github.com/Robot-Inventor/agent-skills/issues"
   },
@@ -15,6 +14,9 @@
   "author": "Robot-Inventor",
   "type": "module",
   "files": ["./plugin.json", "./skills/", "./scripts/opencode.ts"],
+  "publishConfig": {
+    "provenance": true
+  },
   "scripts": {
     "ci:version": "changeset version && bun ./scripts/syncVersion.ts && git add .",
     "ci:publish": "bun run build && changeset publish"
