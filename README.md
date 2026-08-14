@@ -18,3 +18,14 @@ npx skills add Robot-Inventor/agent-skills
 # Install a specific skill
 npx skills add Robot-Inventor/agent-skills --skill <skill-name>
 ```
+
+## Plugins
+
+```bash
+# Codex
+codex plugin marketplace add Robot-Inventor/agent-skills
+codex plugin add agent-skills@robot-inventor
+
+# OpenCode
+opencode plugin @robot-inventor/agent-skills --global
+```
