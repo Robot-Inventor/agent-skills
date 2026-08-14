@@ -13,7 +13,8 @@
   "license": "MIT",
   "author": "Robot-Inventor",
   "type": "module",
-  "files": ["./plugin.json", "./skills/", "./scripts/opencode.ts"],
+  "main": "./scripts/opencode.ts",
+  "files": ["./plugin.json", "./skills/", "./scripts/"],
   "publishConfig": {
     "access": "public",
     "provenance": true
