@@ -1,0 +1,16 @@
+{
+    "hooks": {
+        "SessionStart": [
+            {
+                "matcher": "startup|resume|clear|compact",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "bun -e \"await import(\"./\" + (await import(\"node:path\")).join(process.env.PLUGIN_ROOT, \"scripts\", \"codex.ts\"))\"",
+                        "additionalContextLimit": 0
+                    }
+                ]
+            }
+        ]
+    }
+}
