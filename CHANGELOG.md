@@ -1,5 +1,11 @@
 # @robot-inventor/agent-skills
 
+## 0.7.2
+
+### Patch Changes
+
+- [#44](https://github.com/Robot-Inventor/agent-skills/pull/44) [`8972720`](https://github.com/Robot-Inventor/agent-skills/commit/89727204986082a20edb1ea08a79d7576bd11079) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - fix: fix Codex plugin definition
+
 ## 0.7.1
 
 ### Patch Changes
