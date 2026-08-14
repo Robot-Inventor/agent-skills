@@ -1,6 +1,6 @@
 {
     "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-    "name": "roboin-agent-skills",
+    "name": "agent-skills",
     "version": "0.7.0",
     "description": "My personal collection of Agent Skills.",
     "author": {
