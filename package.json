@@ -14,7 +14,7 @@
   "author": "Robot-Inventor",
   "type": "module",
   "main": "./scripts/opencode.ts",
-  "files": ["./plugin.json", "./skills/", "./scripts/"],
+  "files": ["./hooks/", "./skills/", "./scripts/"],
   "publishConfig": {
     "access": "public",
     "provenance": true

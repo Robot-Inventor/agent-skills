@@ -6,7 +6,8 @@
                 "hooks": [
                     {
                         "type": "command",
-                        "command": "bun -e \"await import(\"./\" + (await import(\"node:path\")).join(process.env.PLUGIN_ROOT, \"scripts\", \"codex.ts\"))\"",
+                        "command": "bun \"${PLUGIN_ROOT}/scripts/codex.ts\"",
+                        "commandWindows": "powershell -NoProfile -NonInteractive -Command \"& bun (Join-Path $env:PLUGIN_ROOT 'scripts/codex.ts')\"",
                         "additionalContextLimit": 0
                     }
                 ]
