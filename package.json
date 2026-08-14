@@ -19,7 +19,7 @@
   },
   "scripts": {
     "ci:version": "changeset version && bun ./scripts/syncVersion.ts && git add .",
-    "ci:publish": "bun run build && changeset publish"
+    "ci:publish": "changeset publish"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^1.0.0",
