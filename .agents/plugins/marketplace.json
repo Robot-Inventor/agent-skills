@@ -1,0 +1,21 @@
+{
+    "name": "robot-inventor",
+    "interface": {
+        "displayName": "Robot-Inventor Plugins"
+    },
+    "plugins": [
+        {
+            "name": "roboin-agent-skills",
+            "source": {
+                "source": "url",
+                "url": "https://github.com/Robot-Inventor/agent-skills.git",
+                "ref": "main"
+            },
+            "policy": {
+                "installation": "AVAILABLE",
+                "authentication": "ON_INSTALL"
+            },
+            "category": "Developer Tools"
+        }
+    ]
+}

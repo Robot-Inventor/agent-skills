@@ -18,11 +18,15 @@
     "provenance": true
   },
   "scripts": {
-    "ci:version": "changeset version",
-    "ci:publish": "changeset publish"
+    "ci:version": "changeset version && bun ./scripts/syncVersion.ts && git add .",
+    "ci:publish": "bun run build && changeset publish"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^1.0.0",
-    "@changesets/cli": "^3.0.0"
+    "@changesets/cli": "^3.0.0",
+    "@opencode-ai/plugin": "^1.18.18",
+    "@robot-inventor/tsconfig-base": "^7.1.0",
+    "@types/bun": "^1.3.14",
+    "@types/node": "^26.2.0"
   }
 }

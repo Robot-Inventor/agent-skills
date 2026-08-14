@@ -1,0 +1,12 @@
+{
+    "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+    "name": "roboin-agent-skills",
+    "version": "0.6.0",
+    "description": "My personal collection of Agent Skills.",
+    "author": {
+        "name": "Robot-Inventor",
+        "url": "https://roboin.io/"
+    },
+    "repository": "https://github.com/Robot-Inventor/agent-skills",
+    "license": "MIT"
+}
