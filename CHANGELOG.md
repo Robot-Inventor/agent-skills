@@ -1,5 +1,11 @@
 # @robot-inventor/agent-skills
 
+## 0.8.0
+
+### Minor Changes
+
+- [#46](https://github.com/Robot-Inventor/agent-skills/pull/46) [`27c62f0`](https://github.com/Robot-Inventor/agent-skills/commit/27c62f0e251ab633b1c6873d263641e1ee9492f3) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: apply skills to Codex subagents
+
 ## 0.7.2
 
 ### Patch Changes
