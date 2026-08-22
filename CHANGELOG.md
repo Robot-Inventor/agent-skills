@@ -1,5 +1,13 @@
 # @robot-inventor/agent-skills
 
+## 0.9.0
+
+### Minor Changes
+
+- [#51](https://github.com/Robot-Inventor/agent-skills/pull/51) [`b635c0e`](https://github.com/Robot-Inventor/agent-skills/commit/b635c0e91a80d8a9ed493d7eadca2157530a6491) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: re-insert required skills each time a prompt is sent
+
+- [#52](https://github.com/Robot-Inventor/agent-skills/pull/52) [`15cc234`](https://github.com/Robot-Inventor/agent-skills/commit/15cc234935f7ab89d59e89aa94dc4979d33e2bff) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: update `simple-engineering` skill to actively use `request_user_input`
+
 ## 0.8.1
 
 ### Patch Changes
