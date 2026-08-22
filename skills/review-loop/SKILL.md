@@ -26,9 +26,9 @@ The following is the core of this skill; please follow the specified steps.
 
 Request a code review from the subagent.
 
-If you have the option to choose whether to fork the context or launch the subagent in an isolated context when starting it, **always** launch it in an isolated context. Forking the context would be equivalent to a self-review, so you need to launch a subagent in an isolated context to review it from a different perspective.
+If you have the option to choose whether to fork the context or launch the subagent in an isolated context when starting it, **always** launch it in an isolated context. When requesting a review from a sub-agent, be sure to provide them with an overview of the task requested by the user, and instruct them to thoroughly review the changes made to the current workspace.
 
-When requesting a review from a sub-agent, be sure to provide them with an overview of the task requested by the user, and instruct them to thoroughly review the changes made to the current workspace.
+Code reviews by sub-agents can take time. Please note that if you re-spawn a sub-agent currently undergoing a review simply because it has not yet responded, the review process will start over from scratch, resulting in even longer wait times. If the workspace contains a mix of changes made by you and by the user, please specify the files to be reviewed when submitting your review request.
 
 ### 2. Receive reviews and improve your code
 
