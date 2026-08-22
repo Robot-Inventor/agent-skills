@@ -25,3 +25,7 @@ Reinventing the wheel should be avoided. Before adding code, check whether exist
 Keep the YAGNI (You aren't gonna need it) principle in mind. You should not introduce complexity just because you might need it in the future. Also, there is no need to maintain backward compatibility for unreleased features.
 
 The code ultimately delivered to the user should be such that every line of change is necessary and no unnecessary code remains. Carefully review the diff line by line, rather than file by file, to ensure that all changes are truly necessary.
+
+## Establish a shared understanding
+
+If `request_user_input` tool is available, actively use it when asking the user questions, especially while running the grilling session. Do not use it for a single yes/no question; instead, use it when asking multiple questions at once or when presenting multiple options.
