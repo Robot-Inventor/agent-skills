@@ -1,5 +1,11 @@
 # @robot-inventor/agent-skills
 
+## 0.8.1
+
+### Patch Changes
+
+- [#49](https://github.com/Robot-Inventor/agent-skills/pull/49) [`8783136`](https://github.com/Robot-Inventor/agent-skills/commit/878313668fe8c8b3f278c82100ab4d8227ffa2eb) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - fix: address an issue where Codex would unnecessarily respawn review agents
+
 ## 0.8.0
 
 ### Minor Changes
