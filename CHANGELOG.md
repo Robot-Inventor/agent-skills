@@ -1,5 +1,11 @@
 # @robot-inventor/agent-skills
 
+## 0.9.1
+
+### Patch Changes
+
+- [#54](https://github.com/Robot-Inventor/agent-skills/pull/54) [`7057d0d`](https://github.com/Robot-Inventor/agent-skills/commit/7057d0d680dd7c0334f3bb404c9ebf5634b236c3) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: use the `request_user_input` tool even for 4 or more questions
+
 ## 0.9.0
 
 ### Minor Changes
