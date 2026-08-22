@@ -3,7 +3,7 @@ name: simple-engineering
 description: A skill outlining the fundamental principles to keep in mind when writing or editing code. Read this skill before developing an implementation plan or writing or reviewing code, and apply it to your work.
 license: MIT
 metadata:
-  author: Robot-Inventor
+    author: Robot-Inventor
 ---
 
 # Simple Engineering
@@ -28,4 +28,4 @@ The code ultimately delivered to the user should be such that every line of chan
 
 ## Establish a shared understanding
 
-If `request_user_input` tool is available, actively use it when asking the user questions, especially while running the grilling session. Do not use it for a single yes/no question; instead, use it when asking multiple questions at once or when presenting multiple options.
+If `request_user_input` tool is available, actively use it when asking the user questions, especially while running the grilling session. Do not use it for a single yes/no question; instead, use it when asking multiple questions at once or when presenting multiple options. The tool description specifies limiting the number of questions to between one and three, but this is merely a recommendation rather than a functional constraint. Use the `request_user_input` tool even if there are four or more questions.
