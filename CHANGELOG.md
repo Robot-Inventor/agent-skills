@@ -1,5 +1,13 @@
 # @robot-inventor/agent-skills
 
+## 0.10.0
+
+### Minor Changes
+
+- [#56](https://github.com/Robot-Inventor/agent-skills/pull/56) [`929dbc0`](https://github.com/Robot-Inventor/agent-skills/commit/929dbc0468e461612c5ca155a54246e87104116e) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: expanded the web-master skills section to include more information on TypeScript, and added sections on CSS and testing
+
+- [#57](https://github.com/Robot-Inventor/agent-skills/pull/57) [`ef6b8c2`](https://github.com/Robot-Inventor/agent-skills/commit/ef6b8c2989bf969ff5772b6137af64e34f7b32e6) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: add instructions on the DRY principle and refactoring to the simple-engineering skill
+
 ## 0.9.1
 
 ### Patch Changes
