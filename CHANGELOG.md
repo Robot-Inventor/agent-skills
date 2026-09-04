@@ -1,5 +1,11 @@
 # @robot-inventor/agent-skills
 
+## 0.11.0
+
+### Minor Changes
+
+- [#59](https://github.com/Robot-Inventor/agent-skills/pull/59) [`a56164d`](https://github.com/Robot-Inventor/agent-skills/commit/a56164dff4e16647791c75cf247824bb8d28fae7) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: tighten review-loop requirements
+
 ## 0.10.0
 
 ### Minor Changes
