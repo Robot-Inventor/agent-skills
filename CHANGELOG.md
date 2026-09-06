@@ -1,5 +1,11 @@
 # @robot-inventor/agent-skills
 
+## 1.0.0
+
+### Major Changes
+
+- [#61](https://github.com/Robot-Inventor/agent-skills/pull/61) [`73318a2`](https://github.com/Robot-Inventor/agent-skills/commit/73318a2b4d61f1a432d2c47ca42bc0a22bf69306) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: strengthen monitoring for over-engineering
+
 ## 0.11.0
 
 ### Minor Changes
