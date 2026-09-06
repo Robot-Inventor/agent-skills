@@ -16,6 +16,8 @@ Before implementing a feature or fixing a bug, consider all options. Instead of 
 
 Also avoid bringing unnecessary complexity into your code. Carefully examine related processing to ensure there are no impossible conditional branches or unnecessary try-catch blocks. Check the type definitions and actual processing, and remove any impossible conditional branches. There is no need to wrap code in a new try-catch block if an exception is unlikely to occur normally or if a try-catch already exists inside the called function.
 
+Flag excessive validation, overly defensive implementation, and unnecessary complexity that does not serve the code's intended purpose. For example, a function that opens product links for a specific website may only need to verify the hostname. Checking the pathname may add complexity without improving security. You might remove validation by defining the function argument as a type such as `https://example.com/product/{string}`, or by accepting only a product ID and constructing the link inside the function. These are examples, but you should look for simpler implementations of the same kind. Ask what purpose the code serves and whether the implementation contains only what that purpose requires.
+
 ## Avoid reinventing the wheel
 
 Reinventing the wheel should be avoided. Before adding code, check whether existing code in the project or the project's dependencies already provide functionality that covers part or all of that processing. When implementing complex processing, investigate whether a popular and well-maintained library that achieves equivalent functionality exists, and if so, propose using it to the user.
