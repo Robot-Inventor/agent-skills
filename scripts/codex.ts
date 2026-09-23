@@ -1,6 +1,6 @@
 import { exists, readFile } from "node:fs/promises";
-import { dirname, join, parse } from "node:path";
 import { SKILLS } from "./skills";
+import { join } from "node:path";
 
 const main = async () => {
     let input = "";

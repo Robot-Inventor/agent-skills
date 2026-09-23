@@ -1,5 +1,5 @@
 {
-    "extends": "@robot-inventor/tsc.json",
+    "extends": "@robot-inventor/tsconfig-base/tsc.json",
     "compilerOptions": {
         "types": ["@types/node", "@types/bun"]
     }

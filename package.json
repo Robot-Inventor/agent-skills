@@ -15,6 +15,9 @@
   "type": "module",
   "main": "./scripts/opencode.ts",
   "files": ["./hooks/", "./skills/", "./scripts/"],
+  "engines": {
+    "opencode": ">=1.18.29"
+  },
   "publishConfig": {
     "access": "public",
     "provenance": true
@@ -22,6 +25,9 @@
   "scripts": {
     "ci:version": "changeset version && bun ./scripts/syncVersion.ts && git add .",
     "ci:publish": "changeset publish"
+  },
+  "dependencies": {
+    "@opencode/plugin": "^2.0.15"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^1.0.0",
