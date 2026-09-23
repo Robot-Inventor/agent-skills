@@ -1,5 +1,17 @@
 # @robot-inventor/agent-skills
 
+## 1.1.0
+
+### Minor Changes
+
+- [#69](https://github.com/Robot-Inventor/agent-skills/pull/69) [`09e2500`](https://github.com/Robot-Inventor/agent-skills/commit/09e25002de678e2d9ae27ed35bbad30eba8a7b13) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: add some examples to the web-master skill
+
+- [#67](https://github.com/Robot-Inventor/agent-skills/pull/67) [`8191666`](https://github.com/Robot-Inventor/agent-skills/commit/8191666c115bb0c118cb0656dab7cd4298d2db13) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: add a "Do not validate it yourself" section to the web-master skill
+
+### Patch Changes
+
+- [#66](https://github.com/Robot-Inventor/agent-skills/pull/66) [`7d81f74`](https://github.com/Robot-Inventor/agent-skills/commit/7d81f74efc6399eb2716346071f469c37b267361) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: update simple-engineering skills to avoid unnecessary intermediate representations
+
 ## 1.0.1
 
 ### Patch Changes
