@@ -114,9 +114,30 @@ if (myArray.length) {...}
 
 The `max-lines` and `max-lines-per-function` rules exist as indicators of code readability and maintainability. Warnings for these rules suggest that your code design may be poor. Simply removing line breaks to meet the rules is a superficial solution and actually makes the code harder to read, thus violating the essence of the rules. Instead, you should fix the problem by removing redundant code or properly restructuring and modularizing it. If you've only slightly exceeded the limit and your code is already well-designed, you should disable the rules rather than removing line breaks or forcing splits.
 
-### Design code with types at its core
+### Do not validate it yourself
 
 TypeScript types are not just an afterthought to JavaScript. Designing with types in mind keeps your code clean and efficient. With proper type design, validation is rarely needed except at project boundaries such as user input or web API responses. When code is properly designed based on types, function inputs and outputs are reliable, eliminating the need to validate values repeatedly.
+
+Check the project dependencies to see if a validation library is installed. If one is installed, you should leverage the library's features rather than writing your own validator.
+
+```ts
+// Incorrect
+const isRecord = (value: unknown): value is Record<string, unknown> => typeof value === "object" && value !== null && !Array.isArray(value);
+const isParson = (value: unknown): value is Person => isRecord(value) && typeof value.name === "string" && typeof value.age === "number" && value.age >= 0;
+
+isParson(externalValue) ? externalValue : "Unknown";
+
+// Correct
+import { type } from "arktype";
+
+const Person = type({
+    name: "string",
+    age: "number >= 0"
+});
+
+const parsed = Person(externalValue);
+parsed instanceof type.errors ? "Unknown" : parsed;
+```
 
 ## CSS
 
