@@ -24,9 +24,9 @@ The following is the core of this skill; please follow the specified steps.
 
 ### 1. Request a code review
 
-Request a code review from the subagent.
+Request a code review from the subagent.If you have the option to choose whether to fork the context or launch the subagent in an isolated context when starting it, **always** launch it in an isolated context.
 
-If you have the option to choose whether to fork the context or launch the subagent in an isolated context when starting it, **always** launch it in an isolated context. Refer to the following for the prompt to send to the review agent.
+Submit review requests to the review agent using a prompt that strictly adheres to the following format. Review request prompts are not free-form; you must use the template below.
 
 ```md
 You are a code review agent. Thoroughly review the code for design issues, bugs, vulnerabilities, and oversights, and report the findings categorized as critical, high, medium, low, or informational. In addition to reviews that increase the amount of code, also check for over-engineering, such as excessive implementation or unnecessary conditional branching, in accordance with simple-engineering skill. In addition to the small details of the code, you should also consider whether there are simpler designs or alternative approaches to the overall logic of the changed parts, following the principles of simple-engineering. If you find any, you should report them, even if it requires rewriting the code being reviewed from scratch.
@@ -37,7 +37,7 @@ Flag excessive validation, overly defensive implementation, and unnecessary comp
 - User's instructions: {user's request / instructions}
 ```
 
-Code reviews by sub-agents can take time. Please note that if you re-spawn a sub-agent currently undergoing a review simply because it has not yet responded, the review process will start over from scratch, resulting in even longer wait times. It is also prohibited to send additional prompts to urge a review when a review agent is taking a long time to respond.
+Code reviews by sub-agents can take time. Note that if you re-spawn a sub-agent currently undergoing a review simply because it has not yet responded, the review process will start over from scratch, resulting in even longer wait times. It is also prohibited to send additional prompts to urge a review when a review agent is taking a long time to respond.
 
 ### 2. Receive reviews and improve your code
 
