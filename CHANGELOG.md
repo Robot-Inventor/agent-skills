@@ -1,5 +1,11 @@
 # @robot-inventor/agent-skills
 
+## 1.0.1
+
+### Patch Changes
+
+- [#64](https://github.com/Robot-Inventor/agent-skills/pull/64) [`5f12fe6`](https://github.com/Robot-Inventor/agent-skills/commit/5f12fe655d23aae2c5fa33680b528188dac69688) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - fix: address an issue where the agent might request a review using a prompt that does not adhere to the template during the review loop
+
 ## 1.0.0
 
 ### Major Changes
