@@ -1,6 +1,6 @@
 {
     "name": "agent-skills",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "description": "My personal collection of Agent Skills.",
     "skills": "./skills",
     "hooks": "./hooks/hooks.json"
