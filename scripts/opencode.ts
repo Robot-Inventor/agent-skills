@@ -1,9 +1,9 @@
+import { exists, readFile } from "node:fs/promises";
 import { Plugin } from "@opencode/plugin";
 import type { PluginModule } from "@opencode-ai/plugin";
 import { SKILLS } from "./skills";
-import { exists, readFile } from "node:fs/promises";
-import { join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { join } from "node:path";
 
 const selectSkills = async (directory: string) =>
     (await exists(join(directory, "package.json"))) ? SKILLS.web : SKILLS.nonWeb;

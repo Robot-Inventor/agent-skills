@@ -1,4 +1,4 @@
-import fs from "fs/promises";
+import fs from "node:fs/promises";
 import packageJson from "../package.json";
 import pluginJson from "../.codex-plugin/plugin.json";
 
