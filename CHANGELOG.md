@@ -1,5 +1,11 @@
 # @robot-inventor/agent-skills
 
+## 1.2.0
+
+### Minor Changes
+
+- [#70](https://github.com/Robot-Inventor/agent-skills/pull/70) [`dba8944`](https://github.com/Robot-Inventor/agent-skills/commit/dba8944340c4e1ed1a314245de11f36279037738) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: add OpenCode v2 support to the plugin
+
 ## 1.1.0
 
 ### Minor Changes
