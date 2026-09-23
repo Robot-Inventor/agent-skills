@@ -147,9 +147,47 @@ When writing CSS, first check if a reset CSS is loaded into your project and if 
 
 In CSS, you should only specify properties that need to be changed from the parent element, and you should not specify properties that do not need to be changed again. Remember that CSS has inheritance, and style accordingly.
 
+```css
+/* reset.css */
+* {
+    margin: 0;
+}
+```
+
+```css
+/* style.css */
+
+/* Incorrect */
+h1 {
+    margin: 0;
+    font-weight: bold;
+}
+
+h1 div {
+    font-weight: bold;
+}
+
+/* Correct */
+h1 {
+    font-weight: bold;
+}
+```
+
 ### Intentional typography design
 
 Do not specify `font-family` outside the document root unless absolutely necessary, such as in code blocks. Also, as a general rule, do not change the font size unless there is a clear reason, such as making unimportant notices smaller or headings larger. Since the base font size may be overridden by browser settings, use `em` or `rem` instead of `px` for font size or areas that depend on font size.
+
+```css
+/* Incorrect */
+h1 {
+    font-size: 32px;
+}
+
+/* Correct */
+h1 {
+    font-size: 2rem;
+}
+```
 
 ## HTML and JSX
 
