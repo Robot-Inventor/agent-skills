@@ -2,6 +2,7 @@
 
 My personal collection of Agent Skills.
 
+- [ArkType](skills/arktype/SKILL.md): The skill to use ArkType, a validation library for TypeScript.
 - [cleanup-changes](skills/cleanup-changes/SKILL.md): The skill to revert unnecessary changes and leave only essential changes.
 - [identify-search-maintenance](skills/identify-search-maintenance): The skill to identify web pages that are performing poorly in search results and require maintenance.
 - [prove-it-diagnostics](skills/prove-it-diagnostics/SKILL.md): The skill to fix bugs and improve performance by proving the root cause through minimal reproduction code or benchmarks, rather than relying on speculation based solely on reading the code.
