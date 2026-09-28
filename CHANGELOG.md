@@ -1,5 +1,11 @@
 # @robot-inventor/agent-skills
 
+## 1.3.0
+
+### Minor Changes
+
+- [#72](https://github.com/Robot-Inventor/agent-skills/pull/72) [`0a13745`](https://github.com/Robot-Inventor/agent-skills/commit/0a13745682f95888b2a4d7b73138b1b8652d0714) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: add ArkType skill
+
 ## 1.2.0
 
 ### Minor Changes
