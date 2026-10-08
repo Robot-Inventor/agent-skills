@@ -3,7 +3,7 @@ name: simple-engineering
 description: A skill outlining the fundamental principles to keep in mind when writing or editing code. Read this skill before developing an implementation plan or writing or reviewing code, and apply it to your work.
 license: MIT
 metadata:
-  author: Robot-Inventor
+    author: Robot-Inventor
 ---
 
 # Simple Engineering
@@ -37,7 +37,3 @@ Refactoring should not be done only at special times; if there are poorly design
 ## DRY principle and modifiability
 
 Keep the DRY principle and modifiability in mind. Avoid defining the same thing repeatedly; instead, aim for code that is easy to modify, where changing a single location automatically updates all related processes. For instance, regarding i18n, the ideal approach is to manage available languages and their labels in one place, such that adding or removing a language requires only updating that single location and adding or removing the corresponding translation file.
-
-## Establish a shared understanding
-
-If `request_user_input` tool is available, actively use it when asking the user questions, especially while running the grilling session. Do not use it for a single yes/no question; instead, use it when asking multiple questions at once or when presenting multiple options. The tool description specifies limiting the number of questions to between one and three, but this is not a functional constraint. If you have more than four questions, enter all of them in `request_user_input`, without limiting yourself to three or fewer.
