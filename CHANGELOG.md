@@ -1,5 +1,11 @@
 # @robot-inventor/agent-skills
 
+## 1.3.1
+
+### Patch Changes
+
+- [#74](https://github.com/Robot-Inventor/agent-skills/pull/74) [`5deb0bc`](https://github.com/Robot-Inventor/agent-skills/commit/5deb0bc144ccbe142e39ad1d34e8d5fd1c6aab69) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: remove instructions about the `request_user_input` tool from the `simple-engineering` skill
+
 ## 1.3.0
 
 ### Minor Changes
