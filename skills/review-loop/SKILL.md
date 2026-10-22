@@ -8,7 +8,7 @@ metadata:
 
 # Review Loop Skill
 
-This skill involves thoroughly improving code quality by repeatedly requesting a review from a sub-agent after editing and improving the code based on the results. Humans typically improve code quality by creating a pull request after editing code and having it reviewed by a reviewer. Such reviews are important because they can identify problems that might be missed through self-review alone.
+This skill involves thoroughly improving code quality by repeatedly requesting a review from a sub-agent after editing and improving the code based on the results. Humans typically improve code quality by creating a pull request after editing code and having it reviewed by a reviewer. Such reviews are important because they can identify problems that might be missed through self-review alone. Ignore this skill when the user explicitly instructs to skip the review-loop.
 
 ## When to apply
 
