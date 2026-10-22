@@ -1,5 +1,15 @@
 # @robot-inventor/agent-skills
 
+## 1.4.0
+
+### Minor Changes
+
+- [#78](https://github.com/Robot-Inventor/agent-skills/pull/78) [`bbcabd9`](https://github.com/Robot-Inventor/agent-skills/commit/bbcabd98b0cdeb5f2614550b40fa7c4d96f57817) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: add instructions to the web-master skill prohibiting the omission of curly braces
+
+- [#79](https://github.com/Robot-Inventor/agent-skills/pull/79) [`e6f54c5`](https://github.com/Robot-Inventor/agent-skills/commit/e6f54c55d6f15bd986afc11e5f41ec0510369b5d) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: update instructions regarding test design within the web-master skill
+
+- [#76](https://github.com/Robot-Inventor/agent-skills/pull/76) [`e8296e5`](https://github.com/Robot-Inventor/agent-skills/commit/e8296e500a4e95055e6ccc77d6d547fa2b63f876) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: make review-loop optional
+
 ## 1.3.1
 
 ### Patch Changes
