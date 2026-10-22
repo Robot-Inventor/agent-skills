@@ -205,6 +205,8 @@ Do not mock application-owned modules. Prefer real implementations and test obse
 
 Test the behavior from an external perspective, not the internal implementation. In other words, tests that require changes when refactoring are bad tests. Test the project's code, not the browser or external libraries. For example, it's obvious that a button element will be displayed in the browser when you write it; this tests the browser's behavior, not the project's code.
 
+Add only the necessary tests. Ensure that your tests verify the correct operation of the code and are capable of detecting when the code breaks. Testing outcomes that are already expected to occur is pointless, and tests that fail to detect when the code is broken are worthless. Test the externally observable behavior of the code when provided with normal, boundary, and anomalous input values.
+
 ### Do not export for testing purposes
 
 You should not export functions, values, or other data solely for testing purposes. When testing things that are not used outside of the file except for testing, use [in-source testing](https://vitest.dev/guide/in-source) instead of exporting them and creating a separate test file.
