@@ -139,6 +139,33 @@ const parsed = Person(externalValue);
 parsed instanceof type.errors ? "Unknown" : parsed;
 ```
 
+### Do not omit curly braces
+
+Unless otherwise specified in project documentation or formatters, do not omit curly braces except in early returns. Also, group the code by its logical content using blank lines, just as a human would.
+
+```ts
+// Incorrect
+
+const main = (value) => {
+    if (!Array.isArray(value)) return null;
+    for (const item of value) console.log(item);
+    if (value.length > 0) console.log("Array is not empty");
+}
+
+// Correct
+const main = (value) => {
+    if (!Array.isArray(value)) return null;
+
+    for (const item of value) {
+        console.log(item);
+    }
+
+    if (value.length > 0) {
+        console.log("Array is not empty");
+    }
+}
+```
+
 ## CSS
 
 ### Define only the necessary styles
