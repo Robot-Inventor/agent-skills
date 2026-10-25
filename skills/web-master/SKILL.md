@@ -147,6 +147,7 @@ Unless otherwise specified in project documentation or formatters, do not omit c
 // Incorrect
 
 const main = (value) => {
+    if (value === null) return;
     if (!Array.isArray(value)) return null;
     for (const item of value) console.log(item);
     if (value.length > 0) console.log("Array is not empty");
@@ -154,6 +155,7 @@ const main = (value) => {
 
 // Correct
 const main = (value) => {
+    if (value === null) return;
     if (!Array.isArray(value)) return null;
 
     for (const item of value) {
