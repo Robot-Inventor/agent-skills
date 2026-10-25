@@ -1,5 +1,11 @@
 # @robot-inventor/agent-skills
 
+## 1.5.1
+
+### Patch Changes
+
+- [#83](https://github.com/Robot-Inventor/agent-skills/pull/83) [`3cc98fa`](https://github.com/Robot-Inventor/agent-skills/commit/3cc98fa559aa0e31161d6131f5ada08d2a855576) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: read `AGENTS.md` in review-loop
+
 ## 1.5.0
 
 ### Minor Changes
