@@ -1,5 +1,13 @@
 # @robot-inventor/agent-skills
 
+## 1.5.0
+
+### Minor Changes
+
+- [#80](https://github.com/Robot-Inventor/agent-skills/pull/80) [`184b748`](https://github.com/Robot-Inventor/agent-skills/commit/184b7484a2b7dc5be6d991c6c65d738e18d723fa) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: clarify examples within the web-master skill
+
+- [#82](https://github.com/Robot-Inventor/agent-skills/pull/82) [`f08c243`](https://github.com/Robot-Inventor/agent-skills/commit/f08c243b200b8ab82f24ebf73c581c493806432c) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: review-loop ensures reviews are based on relevant skills
+
 ## 1.4.0
 
 ### Minor Changes
