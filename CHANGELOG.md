@@ -1,5 +1,13 @@
 # @robot-inventor/agent-skills
 
+## 1.5.2
+
+### Patch Changes
+
+- [#85](https://github.com/Robot-Inventor/agent-skills/pull/85) [`5e36b92`](https://github.com/Robot-Inventor/agent-skills/commit/5e36b92cac76b1a5524b550a85cd0805dc5b50df) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: simplify the `web-master` skill
+
+    Removed rules from the skill that are now enforced via `@robot-inventor/oxlint-config`.
+
 ## 1.5.1
 
 ### Patch Changes
