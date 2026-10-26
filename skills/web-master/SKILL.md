@@ -58,7 +58,7 @@ const myFunc2 = (arg: FooResult, arg2: string): number => {...};
 
 Do not add type annotations unless you need them. Start by writing the code without a type annotation. If that causes a type error, first try to resolve it by improving type definitions elsewhere. Use a type annotation only as a last resort when those changes cannot solve the problem.
 
-When you write an object and need to guarantee that it conforms to a specific type, use `satisfies`. If the object will not change, also use `as const`. You don't need to use `as const` on temporary arrays used inline, or `satisfies` on values whose type is obvious, such as arrays of strings. Also, you don't need to specify `ReadOnly` for the type of an `as const satisfies` value.
+When you write an object and need to guarantee that it conforms to a specific type, use `satisfies`. You don't need to use `satisfies` on values whose type is obvious, such as arrays of strings. You don't need to specify `ReadOnly` for the type of an `as const satisfies` value.
 
 ```ts
 // Incorrect
@@ -137,35 +137,6 @@ const Person = type({
 
 const parsed = Person(externalValue);
 parsed instanceof type.errors ? "Unknown" : parsed;
-```
-
-### Do not omit curly braces
-
-Unless otherwise specified in project documentation or formatters, do not omit curly braces except in early returns. Also, group the code by its logical content using blank lines, just as a human would.
-
-```ts
-// Incorrect
-
-const main = (value) => {
-    if (value === null) return;
-    if (!Array.isArray(value)) return null;
-    for (const item of value) console.log(item);
-    if (value.length > 0) console.log("Array is not empty");
-}
-
-// Correct
-const main = (value) => {
-    if (value === null) return;
-    if (!Array.isArray(value)) return null;
-
-    for (const item of value) {
-        console.log(item);
-    }
-
-    if (value.length > 0) {
-        console.log("Array is not empty");
-    }
-}
 ```
 
 ## CSS
