@@ -24,7 +24,8 @@
     "provenance": true
   },
   "scripts": {
-    "format": "oxfmt .",
+    "format": "oxfmt --write .",
+    "format:check": "oxfmt --check .",
     "ci:version": "changeset version && bun ./scripts/syncVersion.ts && git add .",
     "ci:publish": "changeset publish"
   },
