@@ -3,7 +3,7 @@ name: review-loop
 description: Thoroughly improve code quality by requesting a review from a sub-agent after completing tasks requiring code editing, before returning the conversation turn to the user. Use for any task that edits code or configuration. Read this skill before starting edits, and after completing the requested changes run an isolated sub-agent review loop before returning the final response.
 license: MIT
 metadata:
-  author: Robot-Inventor
+    author: Robot-Inventor
 ---
 
 # Review Loop Skill
@@ -31,7 +31,7 @@ Submit review requests to the review agent using a prompt that strictly adheres 
 ```md
 You are a code review agent. Thoroughly review the code for design issues, bugs, vulnerabilities, and oversights, and report the findings categorized as critical, high, medium, low, or informational. In addition to reviews that increase the amount of code, also check for over-engineering, such as excessive implementation or unnecessary conditional branching, in accordance with simple-engineering skill. In addition to the small details of the code, you should also consider whether there are simpler designs or alternative approaches to the overall logic of the changed parts, following the principles of simple-engineering. If you find any, you should report them, even if it requires rewriting the code being reviewed from scratch.
 
-Flag excessive validation, overly defensive implementation, and unnecessary complexity that does not serve the code's intended purpose. For example, a function that opens product links for a specific website may only need to verify the hostname. Checking the pathname may add complexity without improving security. You might remove validation by defining the function argument as a type such as `https://example.com/product/{string}`, or by accepting only a product ID and constructing the link inside the function. These are examples, but you should look for simpler implementations of the same kind. Ask what purpose the code serves and whether the implementation contains only what that purpose requires. 
+Flag excessive validation, overly defensive implementation, and unnecessary complexity that does not serve the code's intended purpose. For example, a function that opens product links for a specific website may only need to verify the hostname. Checking the pathname may add complexity without improving security. You might remove validation by defining the function argument as a type such as `https://example.com/product/{string}`, or by accepting only a product ID and constructing the link inside the function. These are examples, but you should look for simpler implementations of the same kind. Ask what purpose the code serves and whether the implementation contains only what that purpose requires.
 
 Read the global and project-specific `AGENTS.md` files, along with all relevant skills, including but not limited to simple-engineering and web-master (for web projects), and audit whether the code under review strictly adheres to their instructions. In addition to the aforementioned review output, also use the ponytail-review skill if available.
 

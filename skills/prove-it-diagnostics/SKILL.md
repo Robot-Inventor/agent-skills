@@ -3,7 +3,7 @@ name: prove-it-diagnostics
 description: Prove it for debugging, performance investigation, bottleneck analysis, profiling, and optimization work. When reading code does not prove the cause, run a minimal reproduction, add temporary traces, measure bottlenecks, and verify the fix or improvement.
 license: MIT
 metadata:
-  author: Robot-Inventor
+    author: Robot-Inventor
 ---
 
 # Prove It Diagnostics
