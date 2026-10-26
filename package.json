@@ -6,23 +6,25 @@
   "bugs": {
     "url": "https://github.com/Robot-Inventor/agent-skills/issues"
   },
+  "license": "MIT",
+  "author": "Robot-Inventor",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Robot-Inventor/agent-skills.git"
   },
-  "license": "MIT",
-  "author": "Robot-Inventor",
+  "files": [
+    "./hooks/",
+    "./skills/",
+    "./scripts/"
+  ],
   "type": "module",
   "main": "./scripts/opencode.ts",
-  "files": ["./hooks/", "./skills/", "./scripts/"],
-  "engines": {
-    "opencode": ">=1.18.29"
-  },
   "publishConfig": {
     "access": "public",
     "provenance": true
   },
   "scripts": {
+    "format": "oxfmt .",
     "ci:version": "changeset version && bun ./scripts/syncVersion.ts && git add .",
     "ci:publish": "changeset publish"
   },
@@ -35,6 +37,10 @@
     "@opencode-ai/plugin": "^1.18.18",
     "@robot-inventor/tsconfig-base": "^7.1.0",
     "@types/bun": "^1.3.14",
-    "@types/node": "^26.2.0"
+    "@types/node": "^26.2.0",
+    "oxfmt": "^0.74.0"
+  },
+  "engines": {
+    "opencode": ">=1.18.29"
   }
 }

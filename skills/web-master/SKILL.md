@@ -3,7 +3,7 @@ name: web-master
 description: A skill outlining the fundamental principles to keep in mind when writing or editing web-related code. Read this skill before developing an implementation plan or writing or reviewing code for web-related tasks, and apply it to your work.
 license: MIT
 metadata:
-  author: Robot-Inventor
+    author: Robot-Inventor
 ---
 
 # Web Master
@@ -33,10 +33,10 @@ If you need the return type of a library function:
 
 - Check the function's type definitions first.
 - If the library exports that type, use the exported type.
-  - If you need to pass the return type of another library function as a type argument and the library does not export that function's return type, you may use `ReturnType` inside the type argument.
+    - If you need to pass the return type of another library function as a type argument and the library does not export that function's return type, you may use `ReturnType` inside the type argument.
 - If the library does not export the type:
-  - Write the type directly if it is a simple primitive type.
-  - Otherwise, you may use `ReturnType`.
+    - Write the type directly if it is a simple primitive type.
+    - Otherwise, you may use `ReturnType`.
 
 ```ts
 // Incorrect
@@ -122,8 +122,10 @@ Check the project dependencies to see if a validation library is installed. If o
 
 ```ts
 // Incorrect
-const isRecord = (value: unknown): value is Record<string, unknown> => typeof value === "object" && value !== null && !Array.isArray(value);
-const isParson = (value: unknown): value is Person => isRecord(value) && typeof value.name === "string" && typeof value.age === "number" && value.age >= 0;
+const isRecord = (value: unknown): value is Record<string, unknown> =>
+    typeof value === "object" && value !== null && !Array.isArray(value);
+const isParson = (value: unknown): value is Person =>
+    isRecord(value) && typeof value.name === "string" && typeof value.age === "number" && value.age >= 0;
 
 isParson(externalValue) ? externalValue : "Unknown";
 

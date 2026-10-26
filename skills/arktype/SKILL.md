@@ -3,7 +3,7 @@ name: ArkType
 description: This skill explains how to use ArkType, a validation library for TypeScript. Read this skill when writing validation logic using ArkType.
 license: MIT
 metadata:
-  author: Robot-Inventor
+    author: Robot-Inventor
 ---
 
 # ArkType
@@ -29,7 +29,7 @@ const User = type({
         // nested definitions don't need to be wrapped
         "['devices' | 'apps']": "string[]"
     },
-    "areWeCoolYet": "boolean = true"
+    areWeCoolYet: "boolean = true"
 });
 
 // extract the type if needed
@@ -73,9 +73,7 @@ const User = type({
 
 ```ts
 // you can add non-standard constraints with `.narrow()`
-const Odd = type("number").narrow((n, ctx) =>
-    n % 2 === 0 ? ctx.mustBe("odd") : true
-);
+const Odd = type("number").narrow((n, ctx) => (n % 2 === 0 ? ctx.mustBe("odd") : true));
 ```
 
 ## Builtin keywords
@@ -89,14 +87,14 @@ For all built-in primitives and keywords, refer to the documentation: https://ar
 ```ts
 const User = type({
     birthday: "x/^(?<month>\\d{2})-(?<day>\\d{2})-(?<year>\\d{4})$/"
-})
+});
 
-const data = User.assert({ birthday: "05-21-1993" })
+const data = User.assert({ birthday: "05-21-1993" });
 
 // fully type-safe
-data.birthday.groups.month // "05"
-data.birthday.groups.day // "21"
-data.birthday.groups.year // "1993"
+data.birthday.groups.month; // "05"
+data.birthday.groups.day; // "21"
+data.birthday.groups.year; // "1993"
 ```
 
 If you don't need the full features of ArkType and only want to use type-safe regular expressions, you can use ArkRegex.
@@ -123,7 +121,7 @@ const out = parseJson('{ "version": "2.0.0" }');
 ## Recursive Types
 
 ```ts
-import { scope } from "arktype"
+import { scope } from "arktype";
 
 const userScope = scope({
     User: {

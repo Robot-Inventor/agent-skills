@@ -3,7 +3,7 @@ name: cleanup-changes
 description: The skill to revert unnecessary changes and leave only essential changes when a user requests a cleanup of changes, or before committing and creating a pull request.
 license: MIT
 metadata:
-  author: Robot-Inventor
+    author: Robot-Inventor
 ---
 
 # Cleanup Changes Skill
