@@ -4,7 +4,7 @@ import pluginJson from "../.codex-plugin/plugin.json";
 
 const main = async () => {
     pluginJson.version = packageJson.version;
-    await fs.writeFile(".codex-plugin/plugin.json", JSON.stringify(pluginJson, null, 4));
+    await fs.writeFile(".codex-plugin/plugin.json", `${JSON.stringify(pluginJson, null, 4)}\n`);
 };
 
 await main();
