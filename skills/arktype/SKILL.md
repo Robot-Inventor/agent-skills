@@ -1,5 +1,5 @@
 ---
-name: ArkType
+name: arktype
 description: This skill explains how to use ArkType, a validation library for TypeScript. Read this skill when writing validation logic using ArkType.
 license: MIT
 metadata:
