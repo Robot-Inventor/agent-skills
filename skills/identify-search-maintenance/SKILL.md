@@ -1,6 +1,10 @@
 ---
 name: identify-search-maintenance
 description: Identify and diagnose organic-search articles that need maintenance. Use when asked to find pages whose organic traffic declined mainly from ranking loss rather than search-demand decline, analyze Search Console or GA4 data across recent and year-over-year periods, prioritize a maintenance backlog, or compare target pages with current Google results. Do not use this skill to edit article content.
+license: MIT
+metadata:
+    author: Robot-Inventor
+disable-model-invocation: true
 ---
 
 # Identify Search Maintenance
