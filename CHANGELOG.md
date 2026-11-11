@@ -1,5 +1,19 @@
 # @robot-inventor/agent-skills
 
+## 1.6.0
+
+### Minor Changes
+
+- [#98](https://github.com/Robot-Inventor/agent-skills/pull/98) [`d54ab81`](https://github.com/Robot-Inventor/agent-skills/commit/d54ab819cda688463c0234978ee3f9eaa9d68ea5) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - fear: simplify instructions to reduce the number of tokens
+
+### Patch Changes
+
+- [#97](https://github.com/Robot-Inventor/agent-skills/pull/97) [`d92d0c5`](https://github.com/Robot-Inventor/agent-skills/commit/d92d0c596362aecf956ae440154dad11f6358890) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: add `disable-model-invocation: true` for identify-search-maintenance skill
+
+- [#93](https://github.com/Robot-Inventor/agent-skills/pull/93) [`68b33d3`](https://github.com/Robot-Inventor/agent-skills/commit/68b33d3a9239c209cce32e3a1edf61e5014f34d5) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - chore: raname ArkType skill to arktype
+
+- [#93](https://github.com/Robot-Inventor/agent-skills/pull/93) [`68b33d3`](https://github.com/Robot-Inventor/agent-skills/commit/68b33d3a9239c209cce32e3a1edf61e5014f34d5) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - chore: remove cleanup-changes skill
+
 ## 1.5.2
 
 ### Patch Changes
