@@ -1,6 +1,6 @@
 ---
 name: web-master
-description: A skill outlining the fundamental principles to keep in mind when writing or editing web-related code. Read this skill before developing an implementation plan or writing or reviewing code for web-related tasks, and apply it to your work.
+description: Fundamental principles to keep in mind when writing or editing web-related code. Read this skill before developing an implementation plan or writing or reviewing code for web-related tasks.
 license: MIT
 metadata:
     author: Robot-Inventor
@@ -8,13 +8,11 @@ metadata:
 
 # Web Master
 
-Follow these instructions when writing web-related code.
-
 ## TypeScript
 
 ### Do not use type assertions
 
-Do not reach for type assertions unless you need one. Never add a type assertion up front because you think you might need it later. You may use a type assertion only when all of these conditions apply:
+Do not reach for type assertions unless you need one. You may use a type assertion only when all of these conditions apply:
 
 - You first write the code without a type assertion and encounter a type error.
 - You cannot resolve that type error by improving type definitions elsewhere.
@@ -22,46 +20,38 @@ Do not reach for type assertions unless you need one. Never add a type assertion
 
 ### Do not use `ReturnType`
 
-Do not use `ReturnType` unless you need it. Use the following approaches instead.
+Do not use `ReturnType` unless you need it. If you need to use the return type of a specific function defined in the project:
 
-If you need to use the return type of a specific function defined in the project somewhere other than that function:
-
-- For a simple primitive type such as `boolean` or `string`, write the type directly.
+- For a simple type such as `boolean` or `string`, write the type directly.
 - For a complex type, define a named type, specify it as the function's return type (`(): T => {}`), and reuse `T`.
 
-If you need the return type of a library function:
+If you need the return type of a library function, first check the function's type definitions. Then,
 
-- Check the function's type definitions first.
-- If the library exports that type, use the exported type.
-    - If you need to pass the return type of another library function as a type argument and the library does not export that function's return type, you may use `ReturnType` inside the type argument.
+- If the library exports that type, use it.
 - If the library does not export the type:
     - Write the type directly if it is a simple primitive type.
     - Otherwise, you may use `ReturnType`.
 
 ```ts
-// Incorrect
+// Bad
 import foo from "foo";
-
 const myFunc = (): string => {...};
-
 const myFunc2 = (arg: ReturnType<typeof foo>, arg2: ReturnType<typeof myFunc>): number => {...};
 
-// Correct
+// Good
 import type { FooResult } from "foo";
-
 const myFunc = (): string => {...};
-
 const myFunc2 = (arg: FooResult, arg2: string): number => {...};
 ```
 
 ### Prefer `as const satisfies` over type annotations
 
-Do not add type annotations unless you need them. Start by writing the code without a type annotation. If that causes a type error, first try to resolve it by improving type definitions elsewhere. Use a type annotation only as a last resort when those changes cannot solve the problem.
+Use a type annotation only as a last resort. Start by writing the code without a type annotation. If that causes a type error, first try to resolve it by improving type definitions elsewhere.
 
 When you write an object and need to guarantee that it conforms to a specific type, use `satisfies`. You don't need to use `satisfies` on values whose type is obvious, such as arrays of strings. You don't need to specify `ReadOnly` for the type of an `as const satisfies` value.
 
 ```ts
-// Incorrect
+// Bad
 const foo: T = {
     bar: "bar"
 };
@@ -70,45 +60,30 @@ const foo = {
     bar: "bar"
 } as const satisfies ReadOnly<T>;
 
-// Correct
+// Good
 const foo = {
     bar: "bar"
 } as const satisfies T;
 ```
 
-### Do not disable ESLint rules
+### Do not disable linter rules
 
-Do not disable ESLint rules as an easy workaround. ESLint errors usually identify low-quality code rather than create pointless obstacles. Disabling a rule to silence an error leaves the underlying problem in place.
+Do not disable linter rules as an easy workaround. Disable an linter rules only as a last resort when no better option exists. Handle linter errors as follows:
 
-Disable an ESLint rule only as a last resort when no better option exists. Handle ESLint errors as follows:
-
-1. Understand what ESLint is reporting. Identify the affected code and the purpose behind the rule.
+1. Understand what the rule is reporting. Identify the affected code and the purpose behind the rule.
 2. Improve the code in a way that addresses that purpose.
 3. Disable the rule only when complying with it would make the code **excessively** complex, the warning is a clear false positive, you have another legitimate reason to disable it, or a possible fix would conflict with the rule's underlying intent.
 
 #### Examples
 
-The ESLint `sort-imports` rule defines a consistent import order. In properly modularized code, behavior should not depend on import order, so you should follow the rule.
-
-```ts
-// Incorrect
-/* eslint-disable sort-imports */
-import foo from "foo";
-import bar from "bar";
-
-// Correct
-import bar from "bar";
-import foo from "foo";
-```
-
 The `no-magic-numbers` rule exists to give numeric values meaningful names when their purpose would otherwise be unclear. You do not need to force an obvious value, such as `60` when it represents the number of seconds in a minute, into a constant just to satisfy the rule. In that case, disabling the rule is acceptable. Replacing `1` with a constant named `ONE` also defeats the purpose of `no-magic-numbers`. Give the value a meaningful name instead, or disable the rule if its meaning is already obvious. Also consider whether the number needs to be hard-coded in the first place.
 
 ```ts
-// Incorrect
+// Bad
 // eslint-disable-next-line no-magic-numbers
 if (myArray.length !== 0) {...}
 
-// Correct
+// Good
 if (myArray.length) {...}
 ```
 
@@ -116,12 +91,10 @@ The `max-lines` and `max-lines-per-function` rules exist as indicators of code r
 
 ### Do not validate it yourself
 
-TypeScript types are not just an afterthought to JavaScript. Designing with types in mind keeps your code clean and efficient. With proper type design, validation is rarely needed except at project boundaries such as user input or web API responses. When code is properly designed based on types, function inputs and outputs are reliable, eliminating the need to validate values repeatedly.
-
-Check the project dependencies to see if a validation library is installed. If one is installed, you should leverage the library's features rather than writing your own validator.
+TypeScript types are not just an afterthought to JavaScript. With proper type design, validation is rarely needed except at project boundaries such as user input or web API responses. When code is properly designed based on types, function inputs and outputs are reliable, eliminating the need to validate values repeatedly. If project's dependencies include a validation library, you should use it.
 
 ```ts
-// Incorrect
+// Bad
 const isRecord = (value: unknown): value is Record<string, unknown> =>
     typeof value === "object" && value !== null && !Array.isArray(value);
 const isParson = (value: unknown): value is Person =>
@@ -129,7 +102,7 @@ const isParson = (value: unknown): value is Person =>
 
 isParson(externalValue) ? externalValue : "Unknown";
 
-// Correct
+// Good
 import { type } from "arktype";
 
 const Person = type({
@@ -145,9 +118,9 @@ parsed instanceof type.errors ? "Unknown" : parsed;
 
 ### Define only the necessary styles
 
-When writing CSS, first check if a reset CSS is loaded into your project and if that reset CSS is applied to the page or layout file you are currently working on. If a reset CSS is in place, you do not need to define styles that overlap with it, such as `margin: 0` (this is an example, but not limited to this).
+When writing CSS, first check if a reset CSS is installed into your project and if the reset CSS is applied to the page. Don't define styles that overlap with the reset CSS, such as `margin: 0`.
 
-In CSS, you should only specify properties that need to be changed from the parent element, and you should not specify properties that do not need to be changed again. Remember that CSS has inheritance, and style accordingly.
+You should only specify properties that need to be changed from the parent element, and you should not specify properties that do not need to be changed again. Remember that CSS has inheritance, and style accordingly.
 
 ```css
 /* reset.css */
@@ -159,7 +132,7 @@ In CSS, you should only specify properties that need to be changed from the pare
 ```css
 /* style.css */
 
-/* Incorrect */
+/* Bad */
 h1 {
     margin: 0;
     font-weight: bold;
@@ -169,7 +142,7 @@ h1 div {
     font-weight: bold;
 }
 
-/* Correct */
+/* Good */
 h1 {
     font-weight: bold;
 }
@@ -177,15 +150,15 @@ h1 {
 
 ### Intentional typography design
 
-Do not specify `font-family` outside the document root unless absolutely necessary, such as in code blocks. Also, as a general rule, do not change the font size unless there is a clear reason, such as making unimportant notices smaller or headings larger. Since the base font size may be overridden by browser settings, use `em` or `rem` instead of `px` for font size or areas that depend on font size.
+Do not specify `font-family` outside the document root unless absolutely necessary, such as in code blocks. Don't change the font size unless there is a clear reason, such as making unimportant notices smaller or headings larger. Since the base font size may be overridden by browser settings, use `em` or `rem` instead of `px` for font size or areas that depend on font size.
 
 ```css
-/* Incorrect */
+/* Bad */
 h1 {
     font-size: 32px;
 }
 
-/* Correct */
+/* Good */
 h1 {
     font-size: 2rem;
 }
@@ -195,15 +168,13 @@ h1 {
 
 ### Avoid redundant definitions
 
-If a UI component library is available, actively use its components and reduce custom implementations unless absolutely necessary.
+If a UI component library is installed in the project, make the most of its components whenever possible, and avoid implementing your own unless absolutely necessary.
 
-Also, avoid adding unnecessary attributes. For example, icon component libraries may have `aria-hidden` set by default; in such cases, there's no need to set this attribute again when using the component.
+Refrain from adding unnecessary attributes. For example, icon component libraries may have `aria-hidden` set by default.
 
 ## Testing
 
 ### Design tests properly
-
-Do not mock application-owned modules. Prefer real implementations and test observable behavior rather than implementation wiring. Use mocks only at slow, nondeterministic, destructive, or external boundaries. Avoid tests whose assertions only verify mock calls or values configured on mocks.
 
 Test the behavior from an external perspective, not the internal implementation. In other words, tests that require changes when refactoring are bad tests. Test the project's code, not the browser or external libraries. For example, it's obvious that a button element will be displayed in the browser when you write it; this tests the browser's behavior, not the project's code.
 
@@ -211,8 +182,8 @@ Add only the necessary tests. Ensure that your tests verify the correct operatio
 
 ### Do not export for testing purposes
 
-You should not export functions, values, or other data solely for testing purposes. When testing things that are not used outside of the file except for testing, use [in-source testing](https://vitest.dev/guide/in-source) instead of exporting them and creating a separate test file.
+You should not export functions, values, or other data solely for testing purposes. When testing things that are not used outside of the file except for testing, use [in-source testing](https://vitest.dev/guide/in-source).
 
-### Do not mock the external environment
+### Do not use mocks
 
-For tests that require access to databases or external servers, use Testcontainers instead of mocking them. If a timer is needed, use the fake timer from the test library.
+Do not mock application-owned modules. Use mocks only at slow, nondeterministic, destructive, or external boundaries. Avoid tests whose assertions only verify mock calls or values configured on mocks. For tests that require access to databases or external servers, use Testcontainers instead of mocking them. If a timer is needed, use the fake timer from the test library.
