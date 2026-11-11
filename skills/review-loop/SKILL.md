@@ -1,6 +1,6 @@
 ---
 name: review-loop
-description: Thoroughly improve code quality by requesting a review from a sub-agent after completing tasks requiring code editing, before returning the conversation turn to the user. Use for any task that edits code or configuration. Read this skill before starting edits, and after completing the requested changes run an isolated sub-agent review loop before returning the final response.
+description: Improve code quality by requesting a review from a subagent. Use for any task that edits code or configuration.
 license: MIT
 metadata:
     author: Robot-Inventor
@@ -8,49 +8,33 @@ metadata:
 
 # Review Loop Skill
 
-This skill involves thoroughly improving code quality by repeatedly requesting a review from a sub-agent after editing and improving the code based on the results. Humans typically improve code quality by creating a pull request after editing code and having it reviewed by a reviewer. Such reviews are important because they can identify problems that might be missed through self-review alone. Ignore this skill when the user explicitly instructs to skip the review-loop.
-
-## When to apply
-
-Apply this skill in the following situations:
-
-- When you have performed a task that requires code editing, and
-- After completing the task instructed by the user, and
-- Before returning the conversation to the user
+Improve code quality by repeatedly requesting a review from a subagent after editing code. Reviews are important because they can identify issues that might be missed through self-review. Ignore this skill when the user explicitly instructs to skip the review-loop.
 
 ## Steps
 
-The following is the core of this skill; please follow the specified steps.
-
 ### 1. Request a code review
 
-Request a code review from the subagent.If you have the option to choose whether to fork the context or launch the subagent in an isolated context when starting it, **always** launch it in an isolated context.
+Request a code review from a subagent. If you have the option to choose whether to fork the context or launch the subagent in an isolated context when starting it, **always** launch it in an isolated context. Code reviews by sub-agents can take time. Do not restart subagents or send additional prompts to rush them simply because the review is not yet complete or because the response is taking a while.
 
-Submit review requests to the review agent using a prompt that strictly adheres to the following format. Review request prompts are not free-form; you must use the template below.
+When requesting a review from subagents, be sure to use the following template instead of a free-form format.
 
 ```md
-You are a code review agent. Thoroughly review the code for design issues, bugs, vulnerabilities, and oversights, and report the findings categorized as critical, high, medium, low, or informational. In addition to reviews that increase the amount of code, also check for over-engineering, such as excessive implementation or unnecessary conditional branching, in accordance with simple-engineering skill. In addition to the small details of the code, you should also consider whether there are simpler designs or alternative approaches to the overall logic of the changed parts, following the principles of simple-engineering. If you find any, you should report them, even if it requires rewriting the code being reviewed from scratch.
+You are a code review agent. Review the code by reading the instructions in `~/.agents/skills/review-loop/references/review-instructions.md`.
 
-Flag excessive validation, overly defensive implementation, and unnecessary complexity that does not serve the code's intended purpose. For example, a function that opens product links for a specific website may only need to verify the hostname. Checking the pathname may add complexity without improving security. You might remove validation by defining the function argument as a type such as `https://example.com/product/{string}`, or by accepting only a product ID and constructing the link inside the function. These are examples, but you should look for simpler implementations of the same kind. Ask what purpose the code serves and whether the implementation contains only what that purpose requires.
-
-Read the global and project-specific `AGENTS.md` files, along with all relevant skills, including but not limited to simple-engineering and web-master (for web projects), and audit whether the code under review strictly adheres to their instructions. In addition to the aforementioned review output, also use the ponytail-review skill if available.
-
-- Target: {uncomitted changes / filepath etc.}
-- User's instructions: {user's request / instructions}
+- Scope: {uncomitted changes / filepath etc.}
+- User's instructions: {user's feature requests / instructions etc.}
 ```
-
-Code reviews by sub-agents can take time. Note that if you re-spawn a sub-agent currently undergoing a review simply because it has not yet responded, the review process will start over from scratch, resulting in even longer wait times. It is also prohibited to send additional prompts to urge a review when a review agent is taking a long time to respond.
 
 ### 2. Receive reviews and improve your code
 
-Once you receive the review results from the sub-agent, consider whether each point is valid. You may ignore clearly unreasonable points, but you must address valid points and correct the code accordingly.
+You may ignore clearly unreasonable points, but you must address valid points. If it is pointed out that there is a discrepancy between user requirements and the implementation, you must address it; if addressing it proves difficult and you have to make a compromise, report this honestly to the user.
 
-In particular, if you receive feedback on a part that doesn't strictly follow the user's instructions as a result of compromises, do not ignore it. Instead, correct it according to the review to align with the user's instructions as much as possible. If you absolutely cannot comply with the user's request, you may ignore the sub-agent's point about that part, but be sure to inform the user of the compromise you made when you return the conversation to them.
+For each bug or vulnerability, if the sum of its likelihood and impact ratings is 6 or higher, you must address it. If the sum is 5 or lower, defer fixing it and report it to the user.
 
 ### 3. Review loop
 
-After addressing valid feedback from the subagent, repeat steps 1 and 2 ("1. Request a code review" and "2. Receive reviews and improve your code") until there is no more valid feedback from the subagent, thoroughly improving your code quality. In this review loop, always have a new subagent review your code each time.
+After addressing valid feedback from the subagent, repeat steps 1 and 2 until there is no more valid feedback from the subagent. Always launch a new subagent to review your code each time.
 
 ### 4. Report the results to the user
 
-Once the review loop is complete, return the conversation to the user. Be sure to honestly report to the user any points where you had to compromise and did not strictly follow their instructions.
+Once the review loop is complete, report to the user whether you have fixed each issue pointed out in the review and whether you deemed it reasonable. For bugs and vulnerabilities, also include a rating of their occurrence and impact.

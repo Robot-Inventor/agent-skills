@@ -1,6 +1,6 @@
 ---
 name: arktype
-description: This skill explains how to use ArkType, a validation library for TypeScript. Read this skill when writing validation logic using ArkType.
+description: How to use ArkType, a validation library for TypeScript.
 license: MIT
 metadata:
     author: Robot-Inventor
@@ -8,11 +8,7 @@ metadata:
 
 # ArkType
 
-This skill explains how to use ArkType, a validation library for TypeScript. Read this skill when writing validation logic using ArkType. ArkType is a library that allows you to validate values ​​using a notation very similar to that of TypeScript type definitions.
-
-## Installation
-
-If ArkType is not yet present in the project's dependencies, you can install it with `npm install arktype`. If the project uses a package manager other than npm, use that instead.
+ArkType is a library that allows you to validate values using a notation very similar to that of TypeScript type definitions.
 
 ## Basic usage
 
@@ -78,9 +74,7 @@ const Odd = type("number").narrow((n, ctx) => (n % 2 === 0 ? ctx.mustBe("odd") :
 
 ## Builtin keywords
 
-In ArkType, for example, you can represent a URL-formatted string with `type("string.url")`, and you can morph it into a URL object while performing validation using `type("string.url.parse")`.
-
-For all built-in primitives and keywords, refer to the documentation: https://arktype.io/docs/keywords
+For example, you can represent a URL-formatted string with `type("string.url")`, and you can morph it into a URL object while performing validation using `type("string.url.parse")`. For all built-in primitives and keywords, refer to the documentation: https://arktype.io/docs/keywords
 
 ## Regex
 
