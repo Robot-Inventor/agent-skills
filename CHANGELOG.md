@@ -1,5 +1,11 @@
 # @robot-inventor/agent-skills
 
+## 1.6.1
+
+### Patch Changes
+
+- [#100](https://github.com/Robot-Inventor/agent-skills/pull/100) [`3a6fd03`](https://github.com/Robot-Inventor/agent-skills/commit/3a6fd030a78f298dbfb1510cf0492bcacc1bdac0) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - fix: stop the review loop once no unaddressed finding with likelihood+impact >= 6 remains
+
 ## 1.6.0
 
 ### Minor Changes
