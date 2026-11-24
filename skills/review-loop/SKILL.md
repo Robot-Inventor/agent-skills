@@ -33,7 +33,7 @@ For each bug or vulnerability, if the sum of its likelihood and impact ratings i
 
 ### 3. Review loop
 
-After addressing valid feedback from the subagent, repeat steps 1 and 2 until there is no more valid feedback from the subagent. Always launch a new subagent to review your code each time.
+After addressing valid feedback from the subagent, repeat steps 1 and 2. Stop when no unaddressed finding has a likelihood+impact sum of 6 or higher. Findings deferred under step 2 do not justify another round. Always launch a new subagent to review your code each time.
 
 ### 4. Report the results to the user
 
