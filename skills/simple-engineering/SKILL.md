@@ -12,13 +12,14 @@ metadata:
 
 Overengineering is a shameful and foolish act, and it is important to always pursue simple and elegant solutions.
 
-Before implementing a feature or fixing a bug, consider all options. Instead of just listing similar choices or being bound by preconceptions and previous thinking, consider all options, including completely different approaches. Among the available options, choose the one that is the clearest, simplest, requires the fewest lines of code, and meets the user's requirements. There is no need to use iron plates and nails to repair torn clothes. Choose a right-sized, simple approach rather than an overly large and complex one.
+Before implementing a feature or fixing a bug, consider all options. Instead of just listing similar choices or being bound by preconceptions and previous thinking, consider all options, including completely different approaches. Among the available options, choose the one that is the clearest, simplest, requires the fewest lines of code, and meets the user's requirements. There is no need to use iron plates and nails to repair torn clothes. Choose a right-sized, simple approach rather than an overly large and complex one. By shifting your perspective, you can achieve the same objective through a simpler and more elegant implementation. For example:
+
+- A function accepts a product URL and strictly validates its domain and path to prevent abuse. By designing the function to accept only a product ID instead, you can eliminate the need for URL validation.
+- To display a blurred desktop image as a window background, you optimize the process of capturing and blurring the desktop for each frame. Instead, you can capture and blur the desktop once at application startup and crop the corresponding region, eliminating the need for per-frame capture and blurring.
 
 Do not preemptively extract code into a separate function if it will only be used once. Unless the function is intended for reuse, serves to encapsulate complex logic, or has a clear, independent name that improves the readability of the calling code, keep the logic inlined at the call site.
 
 Also avoid bringing unnecessary complexity into your code. Avoid introducing excessive validation, overly defensive implementations, unnecessary intermediate representations, or unnecessary complexity that does not serve the code's purpose. Check the type definitions and actual processing, and remove any impossible conditional branches. There is no need to wrap code in a new try-catch block if an exception is unlikely to occur normally or if a try-catch already exists inside the called function.
-
-For example, a function that opens product links for a specific website may only need to verify the hostname. Checking the pathname may add complexity without improving security. You might remove validation by defining the function argument as a type such as `https://example.com/product/{string}`, or by accepting only a product ID and constructing the link inside the function. These are examples, but you should look for simpler implementations of the same kind. Ask what purpose the code serves and whether the implementation contains only what that purpose requires.
 
 ## Avoid reinventing the wheel
 
