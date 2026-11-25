@@ -1,5 +1,11 @@
 # @robot-inventor/agent-skills
 
+## 1.6.2
+
+### Patch Changes
+
+- [#102](https://github.com/Robot-Inventor/agent-skills/pull/102) [`06a2249`](https://github.com/Robot-Inventor/agent-skills/commit/06a22492d800adbec1d2c935ca2480199256cbfb) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: add examples for "Keep it simple and elegant"
+
 ## 1.6.1
 
 ### Patch Changes
