@@ -1,5 +1,11 @@
 # @robot-inventor/agent-skills
 
+## 1.7.0
+
+### Minor Changes
+
+- [#104](https://github.com/Robot-Inventor/agent-skills/pull/104) [`d6e28f5`](https://github.com/Robot-Inventor/agent-skills/commit/d6e28f5b5af454fbd6ce25336aee11b92cb7934e) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: add checklist for simple-engineering
+
 ## 1.6.2
 
 ### Patch Changes
