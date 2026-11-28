@@ -33,7 +33,7 @@
     "@opencode/plugin": "^2.0.15"
   },
   "devDependencies": {
-    "@changesets/changelog-github": "^1.0.0",
+    "@changesets/changelog-github": "^2.0.0",
     "@changesets/cli": "^3.0.0",
     "@opencode-ai/plugin": "^1.18.18",
     "@robot-inventor/tsconfig-base": "^7.1.0",
